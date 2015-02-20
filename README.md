@@ -2,6 +2,10 @@
 
 Script for sending the currently playing track on Last.fm to a Slack WebHook.
 
+![Screenshot](https://raw.githubusercontent.com/DekodeInteraktiv/last-slack/master/screenshot.png)
+
+*Note: It will not send the last track played, only the one which is currently playing.*
+
 ## Requirements
 
 * [Node.js](http://nodejs.org/)
