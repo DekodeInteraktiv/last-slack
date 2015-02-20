@@ -1,0 +1,19 @@
+{
+  "name": "last-slack",
+  "version": "1.0.0",
+  "description": "Script to send your last playing track on Last.FM to a Slack WebHook",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "last.fm",
+    "slack"
+  ],
+  "author": "Michael Enger",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.6.0",
+    "request": "^2.53.0"
+  }
+}
