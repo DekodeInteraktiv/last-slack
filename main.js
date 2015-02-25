@@ -8,7 +8,8 @@ function fetchLastPlayedTrack(username, callback) {
 			"&user=" + username +
 			"&api_key=" + config.lastfm.apiKey +
 			"&format=json",
-		data;
+		data,
+		track;
 
 	request(url, function (error, response, body) {
 		if (error) {
@@ -19,16 +20,23 @@ function fetchLastPlayedTrack(username, callback) {
 			try {
 				data = JSON.parse(body);
 				if (data.recenttracks && data.recenttracks.track) {
+					track = data.recenttracks.track;
+
+					if (Array.isArray(track)) {
+						track = track[0];
+					}
+
 					if (callback) {
-						callback(data.recenttracks.track[0]);
+						callback(track);
 					} else {
-						console.log(data.recenttracks.track[0]);
+						console.log(track);
 					}
 				} else if (data.error && data.message) {
 					console.error(data.message)
 				} else {
 					console.error("Unrecognized data", data);
 				}
+
 				setTimeout(function () {
 					fetchLastPlayedTrack(username, checkIfTrackIsPlayingAndNew);
 				}, 10000);
