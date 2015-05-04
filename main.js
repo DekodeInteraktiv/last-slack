@@ -57,7 +57,9 @@ function checkIfTrackIsPlayingAndNew(track) {
 
 		if (currentTrack != trackName) {
 			console.log(trackName);
-			sendMessageToSlack(trackName);
+			if (!commander.quiet) {
+				sendMessageToSlack(trackName);
+			}
 			currentTrack = trackName;
 		}
 	}
@@ -87,6 +89,7 @@ function sendMessageToSlack(message) {
 commander
 	.version("1.0.0")
 	.usage("[options] <username>")
+	.option("-q, --quiet", "Don't send message to Slack")
 	.parse(process.argv);
 
 if (!commander.args.length) {

@@ -34,6 +34,12 @@ Run the **main.js** script with a Last.fm username and it'll start sending the d
 node main.js michaelenger
 ```
 
+Use `--quiet` to prevent sending a message to Slack. The songs will still be shown in the terminal.
+
+```shell
+node main.js --quiet michaelenger
+```
+
 ## License
 
 Copyright (c) 2015 Dekode Interaktiv
