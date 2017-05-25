@@ -1,10 +1,10 @@
 {
   "name": "last-slack",
   "version": "1.0.0",
-  "description": "Script to send your last playing track on Last.FM to a Slack WebHook",
-  "main": "main.js",
+  "description": "Script to send your last playing track on Last.fm to a Slack WebHook",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js --exec node_modules/.bin/babel-node"
   },
   "keywords": [
     "last.fm",
@@ -13,7 +13,11 @@
   "author": "Michael Enger",
   "license": "MIT",
   "dependencies": {
+    "babel-cli": "6.24.1",
+    "babel-preset-env": "1.4.0",
+    "chalk": "^1.1.3",
     "commander": "^2.6.0",
+    "nodemon": "^1.11.0",
     "request": "^2.53.0"
   }
 }

@@ -31,13 +31,13 @@ cp config-example.json config.json
 Run the **main.js** script with a Last.fm username and it'll start sending the data to Slack.
 
 ```shell
-node main.js michaelenger
+npm start michaelenger
 ```
 
 Use `--quiet` to prevent sending a message to Slack. The songs will still be shown in the terminal.
 
 ```shell
-node main.js --quiet michaelenger
+npm start --quiet michaelenger
 ```
 
 ## License
