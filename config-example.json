@@ -1,5 +1,6 @@
 {
   "lastfm": {
+    "baseUrl": "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks",
     "apiKey": "LASTFM_API_KEY"
   },
   "slack": {
