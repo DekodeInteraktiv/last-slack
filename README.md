@@ -20,7 +20,7 @@ Install the requirements.
 npm install
 ```
 
-Copy the **config-example.json** file to **config.json** and change the Last.fm API key and Slack URL to specify your API key and Slack WebHook URL respectively.
+Copy the **config-example.json** file to **config.json** and change the Last.fm & Slack settings.
 
 ```shell
 cp config-example.json config.json
@@ -28,16 +28,14 @@ cp config-example.json config.json
 
 ## Usage
 
-Run the **main.js** script with a Last.fm username and it'll start sending the data to Slack.
-
 ```shell
-npm start michaelenger
+node index.js michaelenger
 ```
 
 Use `--quiet` to prevent sending a message to Slack. The songs will still be shown in the terminal.
 
 ```shell
-npm start --quiet michaelenger
+node index.js --quiet michaelenger
 ```
 
 ## License

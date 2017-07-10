@@ -1,7 +1,7 @@
-import commander from 'commander';
+const commander = require('commander');
 
-import checkIfTrackIsPlayingAndNew from './lib/checkIfTrackIsPlayingAndNew';
-import fetchLastPlayedTrack from './lib/fetchLastPlayedTrack';
+const checkIfTrackIsPlayingAndNew = require('./lib/checkIfTrackIsPlayingAndNew');
+const fetchLastPlayedTrack = require('./lib/fetchLastPlayedTrack');
 
 // Parse args
 commander
