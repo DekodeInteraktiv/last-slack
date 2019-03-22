@@ -1,3 +1,4 @@
+require('dotenv').config()
 const commander = require('commander')
 
 const checkIfTrackIsPlayingAndNew = require('./lib/checkIfTrackIsPlayingAndNew')

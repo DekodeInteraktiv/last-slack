@@ -4,13 +4,13 @@ Script for sending the currently playing track on Last.fm to a Slack WebHook.
 
 ![Screenshot](https://raw.githubusercontent.com/DekodeInteraktiv/last-slack/master/screenshot.png)
 
-*Note: It will not send the last track played, only the one which is currently playing.*
+_Note: It will not send the last track played, only the one which is currently playing._
 
 ## Requirements
 
-* [Node.js](http://nodejs.org/)
-* An API key from Last.fm (found in [your API accounts](http://www.last.fm/api/accounts))
-* An Incoming WebHook integration with your Slack account (see the [integrations](https://slack.com/services) page for more details)
+- [Node.js](http://nodejs.org/)
+- An API key from Last.fm (found in [your API accounts](http://www.last.fm/api/accounts))
+- An Incoming WebHook integration with your Slack account (see the [integrations](https://slack.com/services) page for more details)
 
 ## Installation
 
@@ -20,10 +20,10 @@ Install the requirements.
 npm install
 ```
 
-Copy the **config-example.json** file to **config.json** and change the Last.fm & Slack settings.
+Copy the **.env-example** file to **.env** and change the Last.fm & Slack settings.
 
 ```shell
-cp config-example.json config.json
+cp .env-example .env
 ```
 
 ## Usage
