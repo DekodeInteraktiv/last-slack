@@ -2,6 +2,8 @@
   "name": "last-slack",
   "version": "1.0.0",
   "description": "Script to send your last playing track on Last.fm to a Slack WebHook",
+  "repository": "https://github.com/jeromelachaud/last-slack",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
