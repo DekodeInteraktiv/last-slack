@@ -18,5 +18,8 @@
     "commander": "^2.6.0",
     "dotenv": "^7.0.0",
     "request-promise-native": "^1.0.4"
+  },
+  "engines": {
+    "node": "8.11.3"
   }
 }
