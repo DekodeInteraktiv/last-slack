@@ -1,0 +1,48 @@
+{
+  "text": "Sometime by Get Your Gun🎧\nhttps://www.last.fm/music/Get+Your+Gun/_/Sometime",
+  "username": "Jerome's playlist",
+  "icon_emoji": ":lastfm:",
+  "attachments": [
+    {
+      "blocks": [
+        {
+          "type": "section",
+          "text": {
+            "type": "mrkdwn",
+            "text": "*<https://www.last.fm/music/Get+Your+Gun/_/Sometime|Sometime by Get Your Gun>*"
+          }
+        },
+        {
+          "type": "image",
+          "title": {
+            "type": "plain_text",
+            "text": "Cover"
+          },
+          "image_url": "https://lastfm-img2.akamaized.net/i/u/300x300/6cb4ec6d53914eb2ce02b4ddf4d3a1de.jpg",
+          "alt_text": "Example Image"
+        },
+        {
+          "type": "actions",
+          "elements": [
+            {
+              "type": "button",
+              "text": {
+                "type": "plain_text",
+                "text": "Search on YouTube"
+              },
+              "url": "https://www.youtube.com/results?search_query"
+            },
+            {
+              "type": "button",
+              "text": {
+                "type": "plain_text",
+                "text": "Search on Bandcamp"
+              },
+              "url": "https://bandcamp.com/search?q"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
