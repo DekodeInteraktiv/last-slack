@@ -5,7 +5,7 @@ module.exports = {
     fetchDelay: process.env.FETCH_DELAY,
   },
   slack: {
-    url: process.env.SLACK_HOOK_URL,
+    hookUrl: process.env.SLACK_HOOK_URL,
     username: process.env.SLACK_BOT_USERNAME,
     icon: process.env.SLACK_BOT_ICON,
   },
