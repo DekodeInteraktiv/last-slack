@@ -3,3 +3,4 @@ node_modules
 .editorconfig
 .eslintrc
 last-slack.paw
+db.json
