@@ -6,7 +6,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "app": "node index.js",
+    "app:dev": "NODE_ENV=development node index.js",
     "web": "node server/server.js",
     "web:dev": "nodemon server/server.js"
   },

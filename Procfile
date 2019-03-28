@@ -1,2 +1,2 @@
-app: npm start $USERNAME
-web: npm run server
+app: npm run app $USERNAME
+web: npm run web
