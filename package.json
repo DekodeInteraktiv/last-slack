@@ -27,6 +27,7 @@
     "express": "^4.16.4",
     "lowdb": "^1.0.0",
     "morgan": "^1.9.1",
+    "morgan-body": "^2.4.5",
     "nodemon": "^1.18.10"
   },
   "engines": {
