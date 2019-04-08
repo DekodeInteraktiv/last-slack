@@ -3,6 +3,10 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 
+// Logs
+const morgan = require('morgan')
+app.use(morgan('dev'))
+
 // Cors
 const cors = require('cors')
 app.use(cors())
@@ -19,32 +23,44 @@ const adapter = new FileAsync('db.json')
 
 low(adapter)
   .then(db => {
-    app.get('/url', async (req, res) => {
-      const url = req.query.url.replace(/ /g, '+')
-      try {
-        db.get('urls')
-          .push({
-            id: Date.now().toString(),
-            url,
-            site: req.query.site,
-          })
-          .write()
-          .then(
-            res
-              .set({
-                'Cache-Control': 'no-store',
+    app
+      .post('/slack', async (req, res) => {
+        const { status, statusText, data } = req.body
+        console.log(status, statusText, data)
+        try {
+          db.get('messages')
+            .push({
+              id: Date.now().toString(),
+              status,
+              statusText,
+              data,
+            })
+            .write()
+            .then(() =>
+              res.send({
+                status,
+                statusText,
+                data,
               })
-              .redirect(301, url)
-          )
-          .catch(err => console.log(err))
-      } catch (err) {
-        res.status(500).send({ error: 'an error occured' })
-      }
-    })
+            )
+            .catch(error => console.log(error))
+        } catch (error) {
+          res.status(500).send({ error: 'an error occured' })
+        }
+      })
+      .get('/slack', async (req, res) => {
+        try {
+          const counter = db
+            .get('messages')
+            .size()
+            .value()
+          res.status(200).send({ counter })
+        } catch (error) {
+          res.status(500).send({ error: 'an error occured' })
+        }
+      })
   })
   .then(() => {
-    app.listen(port, () =>
-      console.log(`Example app listening on port ${port}!`)
-    )
+    app.listen(port, () => console.log(`Server listening on port ${port}`))
   })
-  .catch(err => console.log(err))
+  .catch(error => console.log(error))
